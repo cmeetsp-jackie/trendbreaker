@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔮 TrendBreaker | 지금 가장 핫한 트렌드</title>
+    <meta name="description" content="실시간 트렌딩 키워드를 AI가 1분 안에 설명해드립니다. 친근하고 신비로운 트렌드 분석.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #715BA7;
+            --primary-light: #8B7BB8;
+            --primary-dark: #5A4789;
+            --accent: #FF6B35;
+            --bg: #0A0A0F;
+            --card-bg: #1A1A24;
+            --text: #E8E8F0;
+            --text-muted: #9A9AA8;
+            --border: #2A2A38;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(180deg, rgba(113, 91, 167, 0.1) 0%, transparent 100%);
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .last-update {
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .trend-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .trend-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(113, 91, 167, 0.2);
+        }
+
+        .trend-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .trend-rank {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            min-width: 40px;
+        }
+
+        .trend-keyword {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            flex: 1;
+        }
+
+        .trend-volume {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .trend-summary {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .trend-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            font-size: 12px;
+            padding: 4px 12px;
+            background: rgba(113, 91, 167, 0.1);
+            border: 1px solid rgba(113, 91, 167, 0.3);
+            border-radius: 100px;
+            color: var(--primary-light);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(113, 91, 167, 0.2);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .trend-card {
+                padding: 20px;
+            }
+
+            .trend-keyword {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🔮</div>
+        <h1>TrendBreaker</h1>
+        <p class="subtitle">지금 가장 핫한 트렌드, 1분 안에 이해하기</p>
+        <div class="last-update">
+            <span>⏰</span>
+            <span id="lastUpdate">로딩 중...</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="trends">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>트렌드 불러오는 중...</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with 🎪 by <a href="https://twitter.com/Hyesung_8149" target="_blank">재주</a></p>
+        <p>1시간마다 자동 업데이트</p>
+    </footer>
+
+    <script>
+        async function loadTrends() {
+            try {
+                const response = await fetch('trends.json');
+                const data = await response.json();
+                
+                // 마지막 업데이트 시간
+                const updateTime = new Date(data.lastUpdate);
+                document.getElementById('lastUpdate').textContent = 
+                    `${updateTime.toLocaleString('ko-KR')} 업데이트`;
+                
+                // 트렌드 카드 생성
+                const trendsHtml = data.trends.map(trend => `
+                    <div class="trend-card">
+                        <div class="trend-header">
+                            <div class="trend-rank">${trend.rank}</div>
+                            <div class="trend-keyword">#${trend.keyword}</div>
+                            <div class="trend-volume">${(trend.tweetVolume / 1000).toFixed(1)}K</div>
+                        </div>
+                        <div class="trend-summary">
+                            💫 ${trend.summary}
+                        </div>
+                        <div class="trend-meta">
+                            ${trend.relatedKeywords.map(kw => 
+                                `<span class="meta-tag">#${kw}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                `).join('');
+                
+                document.getElementById('trends').innerHTML = trendsHtml;
+                
+            } catch (error) {
+                console.error('트렌드 로딩 실패:', error);
+                document.getElementById('trends').innerHTML = `
+                    <div class="loading">
+                        <p>❌ 트렌드를 불러올 수 없습니다.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 페이지 로드 시 트렌드 불러오기
+        loadTrends();
+        
+        // 5분마다 자동 갱신
+        setInterval(loadTrends, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

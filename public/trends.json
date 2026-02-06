@@ -1,0 +1,165 @@
+{
+  "lastUpdate": "2026-02-06T13:21:59.242Z",
+  "trends": [
+    {
+      "id": 1,
+      "keyword": "손흥민 해트트릭",
+      "rank": 1,
+      "summary": "손흥민 해트트릭에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "손흥민 해트트릭가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 22226,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 2,
+      "keyword": "AI Native 전환",
+      "rank": 2,
+      "summary": "AI Native 전환에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "AI Native 전환가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 40435,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 3,
+      "keyword": "차란 시리즈B",
+      "rank": 3,
+      "summary": "차란 시리즈B에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "차란 시리즈B가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 40540,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 4,
+      "keyword": "트럼프 대통령",
+      "rank": 4,
+      "summary": "트럼프 대통령에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "트럼프 대통령가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 3434,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 5,
+      "keyword": "넷플릭스 신작",
+      "rank": 5,
+      "summary": "넷플릭스 신작에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "넷플릭스 신작가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 13217,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 6,
+      "keyword": "삼성전자 실적",
+      "rank": 6,
+      "summary": "삼성전자 실적에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "삼성전자 실적가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 37048,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 7,
+      "keyword": "비트코인 급등",
+      "rank": 7,
+      "summary": "비트코인 급등에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "비트코인 급등가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 28111,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 8,
+      "keyword": "날씨 한파",
+      "rank": 8,
+      "summary": "날씨 한파에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "날씨 한파가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 8960,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 9,
+      "keyword": "신메뉴 출시",
+      "rank": 9,
+      "summary": "신메뉴 출시에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "신메뉴 출시가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 4304,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    },
+    {
+      "id": 10,
+      "keyword": "연예인 결혼",
+      "rank": 10,
+      "summary": "연예인 결혼에 대한 간략한 설명이 여기 들어갑니다",
+      "description": "연예인 결혼가 트렌딩 중입니다. 상세 설명은 AI 분석을 통해 자동 생성됩니다.",
+      "importance": "이것이 왜 중요한지에 대한 한 줄 설명",
+      "relatedKeywords": [
+        "관련1",
+        "관련2",
+        "관련3"
+      ],
+      "tweetVolume": 49923,
+      "timestamp": "2026-02-06T13:21:59.242Z",
+      "url": null
+    }
+  ]
+}
