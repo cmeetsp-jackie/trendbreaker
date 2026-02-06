@@ -1,5 +1,10 @@
 {
-  "lastUpdate": "2026-02-06T13:38:12.345Z",
+  "lastUpdate": "2026-02-06T13:40:24.178Z",
+  "totalTrends": 10,
+  "sources": {
+    "naver": 10,
+    "twitter": 0
+  },
   "trends": [
     {
       "id": 1,
@@ -13,8 +18,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 43200,
-      "timestamp": "2026-02-06T13:38:12.343Z",
+      "tweetVolume": 48512,
+      "timestamp": "2026-02-06T13:40:23.979Z",
       "url": null
     },
     {
@@ -29,8 +34,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 50994,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 42102,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -45,8 +50,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 24083,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 18569,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -61,8 +66,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 40130,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 50403,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -77,8 +82,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 35521,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 28571,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -93,8 +98,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 43200,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 35065,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -109,8 +114,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 16152,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 31408,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -125,8 +130,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 31929,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 48360,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -141,8 +146,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 57845,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 55341,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     },
     {
@@ -157,8 +162,8 @@
         "화제",
         "인기"
       ],
-      "tweetVolume": 39658,
-      "timestamp": "2026-02-06T13:38:12.345Z",
+      "tweetVolume": 26961,
+      "timestamp": "2026-02-06T13:40:23.980Z",
       "url": null
     }
   ]

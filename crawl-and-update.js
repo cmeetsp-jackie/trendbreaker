@@ -2,6 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
+const { getTwitterTrends } = require('./twitter-crawler');
 
 /**
  * 네이버 쇼핑 인기 검색어 + 뉴스 크롤링
@@ -93,22 +94,44 @@ async function crawlTrends() {
 }
 
 /**
- * JSON 파일 업데이트
+ * JSON 파일 업데이트 (네이버 + 트위터)
  */
 async function updateTrendsFile() {
   console.log('📝 트렌드 파일 업데이트 중...\n');
   
-  const trends = await crawlTrends();
+  // 네이버 트렌드
+  const naverTrends = await crawlTrends();
+  
+  // 트위터 트렌드
+  const twitterTrends = await getTwitterTrends();
+  
+  // 합치기 (네이버 10개 + 트위터 10개)
+  const allTrends = [
+    ...naverTrends.slice(0, 10),
+    ...twitterTrends.slice(0, 10)
+  ];
+  
+  // 순위 재조정
+  allTrends.forEach((trend, i) => {
+    trend.id = i + 1;
+    trend.rank = i + 1;
+  });
   
   const data = {
     lastUpdate: new Date().toISOString(),
-    trends: trends
+    totalTrends: allTrends.length,
+    sources: {
+      naver: naverTrends.length,
+      twitter: twitterTrends.length
+    },
+    trends: allTrends
   };
   
   const outputPath = path.join(__dirname, 'public/trends.json');
   fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
   
   console.log('✅ 업데이트 완료!');
+  console.log(`📊 네이버: ${naverTrends.length}개, 트위터: ${twitterTrends.length}개`);
   console.log(`📁 ${outputPath}\n`);
   
   return data;
